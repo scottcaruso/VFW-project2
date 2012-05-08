@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--Scott Caruso-->
+<!--Visual Frameworks 1205-->
+<!--Project 1 - Form Page-->
+<html>
+	<head>
+		<title>Add Card to Personal Magic the Gathering Database</title>
+		<meta name="description" content="The page on which the user adds a card to his database." />
+		<meta name="keywords" content="magic, trading card game, database, magic the gathering" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Scott Caruso" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<meta charset="utf-8" />		
+	</head>
+	<body>
+		<header>
+			<h1>Add a New Magic: The Gathering Card</h1>
+		</header>
+		<form action="" method="post">
+			<fieldset>
+				<legend>Primary Details</legend>
+				<label for="cardname">Card Name </label>
+				<input type="text" id="cardname"  />
+				<br><br>
+				<label for="manacost">Mana Cost </label>
+				<select id="manacost">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10+</option>
+				</select>
+				<br>
+				<dl>
+					<dt>Card Color(s)</dt>
+						<dd>
+							<input type="checkbox" value="White" id="white" />
+							<label for="white">White</label>	
+						</dd>
+						<dd>
+							<input type="checkbox" value="Black" id="black" />
+							<label for="black">Black</label>	
+						</dd>
+						<dd>
+							<input type="checkbox" value="Blue" id="blue" />
+							<label for="blue">Blue</label>	
+						</dd>
+						<dd>
+							<input type="checkbox" value="Red" id="red" />
+							<label for="red">Red</label>	
+						</dd>
+						<dd>
+							<input type="checkbox" value="Green" id="green" />
+							<label for="red">Green</label>	
+						</dd>
+						<dd>
+							<input type="checkbox" value="Colorless" id="colorless" />
+							<label for="colorless">Colorless</label>	
+						</dd>
+				</dl>
+				<dl>
+					<dt>Card Type</dt>
+						<dd>
+							<input type="radio" checked value="Creature" id="creature" name="type" />
+							<label for="creature">Creature</label>	
+						</dd>
+						<dd>
+							<input type="radio" value="Planeswalker" id="planeswalker" name="type" />
+							<label for="planeswalker">Planeswalker</label>	
+						</dd>
+						
+						<dd>
+							<input type="radio" value="Instant" id="instant" name="type" />
+							<label for="instant">Instant</label>	
+						</dd>
+						<dd>
+							<input type="radio" value="Sorcery" id="Sorcery" name="type" />
+							<label for="sorcery">Sorcery</label>	
+						</dd>
+						<dd>
+							<input type="radio" value="Enchantment - Buff" id="buff" name="type" />
+							<label for="buff">Enchantment - Buff</label>	
+						</dd>
+						<dd>
+							<input type="radio" value="Enchantment - Curse" id="curse" name="type" />
+							<label for="curse">Enchantment - Curse</label>	
+						</dd>
+						<dd>
+							<input type="radio" value="Artifact" id="artifact" name="type" />
+							<label for="artifact">Artifact</label>	
+						</dd>
+						<dd>
+							<input type="radio" value="Land" id="land" name="type" />
+							<label for="land">Land</label>	
+						</dd>
+						<dd>
+						<!-- The label below is HIDDEN until this awesome new card type is released! -->
+							<input type="hidden" value="Super Awesome New Type" id="newtype" name="type" />
+							<label for="land" hidden>Super Awesome New Type</label>	
+						</dd>
+				</dl>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Secondary Details</legend>
+					<label for="manacost">Currently In Use? </label>
+					<select id="manacost">
+						<option value="true">Yes</option>
+						<option value="false">No</option>
+					</select>
+					<br>
+					<label for="comments">Additional Notes </label>
+					<textarea id="comments"></textarea>
+					<br>
+					<label for="dateacquired">Date Acquired </label>
+					<input type="date" id="dateacquired" placeholder="YYYY/MM/DD" />
+					<br>
+					<label for="preference">How Much I Love This Card </label>
+					<input type="range" id="preference" min="1" max="10" />
+			</fieldset>
+			<br>
+				<input type="button" value="Submit Card Info" id="submit" />
+		</form>
+	</body>
+	<br><br>
+	<footer>
+		<small>
+			<a href="#">Clear Stored Data</a><br>
+			<a href="#">Display Data</a>
+		</small>
+	</footer>
+</html>

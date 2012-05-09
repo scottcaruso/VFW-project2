@@ -38,20 +38,64 @@ span.magic {
 }
 
 h2 {
+    text-align: center;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 22px;
     color: blue;
-    text-align: center;
 }
 
 nav.addcard {
-    border: 1px solid black;;
+    border: 1px solid black;
     width: 145px;
     position: absolute;
     right: 5px;
     background: white;
 }
 
+/*The following 4 will chane the colors in the card listsfor each card.*/
+dd.white {
+    color: white;
+    text-shadow: 1px 0 black
+}
+
+dd.blue {
+    color: blue;
+}
+
+dd.red {
+    color: red;
+}
+
+dd.green {
+    color: green;
+}
+
+dd.gray {
+    color: gray;
+}
+
 a:visited {
-    color: blue
+    color: blue /*Maintain integrity of links. I dislike the "clicked" color.*/
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+label.notes{
+    vertical-align: top;
+}
+
+footer {
+    margin-top: 20px;
+    word-spacing: 1px;
+}
+
+div.formelement{
+    padding-bottom: 15px;
+}
+
+span.displayData{
+    position: absolute;
+    right: 15px;
 }

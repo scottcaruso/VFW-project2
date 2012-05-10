@@ -78,23 +78,29 @@ a:visited {
 }
 
 fieldset {
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 
 label.notes{
     vertical-align: top;
 }
-
+/* If I ever bring the footer back
 footer {
     margin-top: 20px;
     word-spacing: 1px;
 }
-
+*/
 div.formelement{
     padding-bottom: 15px;
 }
 
 span.displayData{
+    position: absolute;
+    right: 15px;
+}
+
+span.addCard{
     position: absolute;
     right: 15px;
 }

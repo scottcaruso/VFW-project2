@@ -16,7 +16,18 @@
 	</head>
 	<body>
 		<header>
-			<h1>Add a New Magic Card</h1>
+			<h1 id="addcardtitle">Magic Card Binder</h1>
+				<nav>
+					<small>
+						<a href="#" id="eraseData">Clear Stored Data</a>
+						<span class="addCard">
+							<a href="additem.html" id="addCard" style="display:none">Add New Card</a>
+						</span>
+						<span class="displayData">
+							<a href="#" id="displayData">Display Data</a>
+						</span>
+					</small>
+				</nav>
 		</header>
 		<form action="" method="post" id="form">
 			<fieldset>
@@ -134,12 +145,4 @@
 		</form>
 		<script src="js/vfw-project.js" type="text/javascript"></script>
 	</body>	
-	<footer>
-		<small>
-            <a href="#" id="eraseData">Clear Stored Data</a>
-            <span class="displayData">
-                <a href="#" id="displayData">Display Data</a>
-            </span>
-		</small>
-	</footer>
 </html>

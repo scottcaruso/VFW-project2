@@ -60,6 +60,27 @@ window.addEventListener("DOMContentLoaded", function(){
 		return colors	
    	};
    	
+   	function toggleControls(dataDisplayed){
+		switch(dataDisplayed){
+			case "on":
+				elementName("form").style.display = "none";
+				elementName("eraseData").style.display = "inline";
+				elementName("displayData").style.display = "none";
+				elementName("addCard").style.display = "inline";			
+				break;
+			case "off":
+				elementName("form").style.display = "block";
+				elementName("eraseData").style.display = "inline";
+				elementName("displayData").style.display = "inline";
+				elementName("addNew").style.display = "none";
+				elementName("cards").style.display = "none";		
+				break;
+			default:
+				elementName("addCard").style.display = "none";
+				return false;
+		};
+	};
+   	
    	//To store the data
    	function saveCard() {
    		var id = Math.floor(Math.random()*3253533);
@@ -76,19 +97,60 @@ window.addEventListener("DOMContentLoaded", function(){
    			card.love = ["Amount of Love:", elementName("preference").value];
    		localStorage.setItem(id, JSON.stringify(card));
    		alert(elementName("cardname").value + " has been added!");
+   		window.location.reload();
    	};
-   
+   	
+   	function displayCards(){
+   		toggleControls("on");
+   		var makeDiv = document.createElement("div");
+   		makeDiv.setAttribute("id", "cards");
+   		var listCardsDL = document.createElement("dl");
+   		makeDiv.appendChild(listCardsDL);
+   		document.body.appendChild(makeDiv);
+   		elementName("cards").style.display = "block";
+   		elementName("addCard").style.display = "inline";
+   		for(var i=0, y=localStorage.length; i<y; i++){
+   			var makedt = document.createElement("dt");
+   			listCardsDL.appendChild(makedt);
+   			var key = localStorage.key(i);
+   			var value = localStorage.getItem(key);
+   			var obj = JSON.parse(value);
+   			var cardTitle = (obj.name[0] + " " + obj.name[1]);
+   			makedt.innerHTML = cardTitle;
+   			var makeCardDetails = document.createElement("dd");
+   			makedt.appendChild(makeCardDetails);
+   			delete obj.name;
+   			for(var n in obj){
+   				var makeCardDetailItem = document.createElement("dd");
+   				makeCardDetails.appendChild(makeCardDetailItem);
+   				var cardText = (obj[n][0] + " " + obj[n][1]);
+   				makeCardDetailItem.innerHTML = cardText;
+   			};
+   		};
+   	};
+   	
+   	function eraseCardData(){
+   		if(localStorage.length === 0){
+   			alert("There are no cards in your binder to clear.");
+   		} else {
+   			localStorage.clear();
+   			alert("All cards have been removed from your binder.");
+   			window.location.reload();
+   			return false;
+   		};
+   	};
+   	   			   
     //Variables
     var manaCosts = ["0","1","2","3","4","5","6","7","8","9","10+"];
     var typeValue;
     makeManaCosts();
 
        
-	/*Make things happen when the links are clicked.
+	//Make things happen when the links are clicked.
 	var displayCardData = elementName("displayData");
-	displayCardData.addEventListener("click", getCardData);
+	displayCardData.addEventListener("click", displayCards);
   	var clearCardData = elementName("eraseData");
-  	clearCardData.addEventListener("click", eraseCardData);*/
+  	clearCardData.addEventListener("click", eraseCardData);
   	var saveCardData = elementName("submit");
   	saveCardData.addEventListener("click", saveCard);                            
 });

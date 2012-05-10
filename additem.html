@@ -18,15 +18,15 @@
 		<header>
 			<h1>Add a New Magic Card</h1>
 		</header>
-		<form action="" method="post">
+		<form action="" method="post" id="form">
 			<fieldset>
                 <legend>Primary Details</legend>
                 <div class="formelement">
                     <label for="cardname">Card Name </label>
                     <input type="text" id="cardname" />
                 </div>
-                <label for="manacost">Mana Cost </label>
-				<select id="manacost">
+              	<label for="manacost" id="manacost">Mana Cost </label>
+				<!--  commenting out, as the javascript now creates this <select id="manacost">
 					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -38,9 +38,9 @@
 					<option value="8">8</option>
 					<option value="9">9</option>
 					<option value="10">10+</option>
-				</select>
+				</select> -->
 				<dl>
-					<dt>Card Color(s)</dt>
+					<dt id = "cardcolors">Card Color(s)</dt>
 						<dd class="white">
 							<input type="checkbox" value="White" id="white" />
 							<label for="white">White</label>
@@ -132,6 +132,7 @@
 			</fieldset>			
 				<input type="button" value="Submit Card Info" id="submit" />
 		</form>
+		<script src="js/vfw-project.js" type="text/javascript"></script>
 	</body>	
 	<footer>
 		<small>
@@ -140,6 +141,5 @@
                 <a href="#" id="displayData">Display Data</a>
             </span>
 		</small>
-        <script src="js/vfw-project.js" type="text/javascript"></script>
 	</footer>
 </html>

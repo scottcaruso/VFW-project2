@@ -10,11 +10,12 @@
 
 html{
     background: #E8E8E8;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
 }
 
 h1 {
     text-align: center;
-    font-family: Tahoma, Geneva, sans-serif;
     font-size: 26px;
     font-weight: bold;
     color: blue;
@@ -26,13 +27,11 @@ p.mainpage {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 14px;
     color: #191970;
 }
 
 span.magic {
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 14px;
     color: #191970;
     font-weight: bold;
 }

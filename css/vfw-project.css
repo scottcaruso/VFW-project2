@@ -95,6 +95,14 @@ div.formelement{
     padding-bottom: 15px;
 }
 
+dt.cardtitle{
+	font-weight: bold;
+}
+
+dd{
+	font-weight: normal;
+}
+
 span.displayData{
     position: absolute;
     right: 15px;

@@ -117,6 +117,7 @@ window.addEventListener("DOMContentLoaded", function(){
    			var obj = JSON.parse(value);
    			var cardTitle = (obj.name[0] + " " + obj.name[1]);
    			makedt.innerHTML = cardTitle;
+   			makedt.setAttribute("class", "cardtitle");
    			var makeCardDetails = document.createElement("dd");
    			makedt.appendChild(makeCardDetails);
    			delete obj.name;

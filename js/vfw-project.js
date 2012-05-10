@@ -3,18 +3,18 @@
 //Project 2
 
 window.addEventListener("DOMContentLoaded", function(){
-    
-    function isPageLoaded(x){
-        var theElement = document.getElementById(x);
-        return theElement;
+	//The below function gets the name of elements from the form.
+    function elementName(x){
+         var  elementName = document.getElementById(x);
+         return elementName;              
     };
-                        
-    var contactGroups = [/*array of inputs*/];
-    var displayLink = displayData(/*name of display id*/);
-    displayLink.addEventListener("click",getData);
-    var clearLink = clearData(/*name of link id*/);
-    clearLink.addEventListener("click",clearData);                        
-    var saveLink = submitData(/*name of submit id*/);
-    saveLink.addEventListener("click",saveData);                           
+   
+	//Make things happen when the links are clicked.
+	var displayCardData = elementName("displayData");
+	displayCardData.addEventListener("click", getCardData);
+  	var clearCardData = elementName("eraseData");
+  	clearCardData.addEventListener("click", eraseCardData);
+  	var saveCardData = elementName("submit");
+  	saveCardData.addEventListener("click", saveCardData);                     
                         
 });
